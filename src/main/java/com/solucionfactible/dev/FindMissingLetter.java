@@ -11,6 +11,15 @@ package com.solucionfactible.dev;
 public class FindMissingLetter {
 	
 	public static char findMissingLetter(char[] array) {
+
+		for (int i = 1; i < array.length; i++) {
+			char caracter1 = array[i];
+			char caracter2 = array[i - 1];
+			if (caracter1 - caracter2 != 1) {
+				return (char) (array[i] - 1);
+			}
+		}
+
 		return ' ';
 	}
 
